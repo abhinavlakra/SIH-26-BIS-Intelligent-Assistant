@@ -1,0 +1,26 @@
+# ManakMitra backend dependencies
+# Lower bounds chosen to match a typical Anaconda base env — avoids
+# force-upgrading fastapi/pydantic that other projects there may rely on.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+pydantic-settings>=2.3
+
+# Vector store + local embeddings (free, offline, demo-safe)
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# LLM (generation only) — Claude default, behind a swappable adapter
+anthropic>=0.40.0
+
+# Tender PDF ingestion. Text-layer extraction only — no OCR, which would need
+# a system Tesseract binary and break the "runs offline, no extra install" rule.
+pypdf>=4.0
+python-multipart>=0.0.9
+
+# Data collection (public BIS catalogue) + testing
+httpx>=0.27
+pytest>=7.4
+# Test/demo only: builds the sample tender PDFs in samples/tenders/. Tests that
+# need it skip cleanly when it is absent.
+reportlab>=4.0
