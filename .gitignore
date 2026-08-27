@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Secrets
+.env
+
+# Generated artefacts (rebuild with: python -m app.ingestion.build_index)
+data/chroma/
+data/raw/
+data/processed/
+# Query telemetry — recreated on first request, and never worth committing.
+data/analytics.sqlite3
+
+# Frontend
+node_modules/
+frontend/dist/
+*.local
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
