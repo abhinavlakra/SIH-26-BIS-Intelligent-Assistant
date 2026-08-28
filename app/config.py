@@ -6,7 +6,7 @@ from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
-PROJECT_ROOT = BACKEND_DIR.parent
+PROJECT_ROOT = BACKEND_DIR
 DATA_DIR = PROJECT_ROOT / "data"
 
 
