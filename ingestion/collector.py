@@ -42,8 +42,8 @@ import httpx
 
 from app import bis_reference as bis
 from app.config import get_settings
-from app.ingestion import taxonomy as taxonomy_module
-from app.ingestion.normalize import load_jsonl, write_jsonl
+from ingestion import taxonomy as taxonomy_module
+from ingestion.normalize import load_jsonl, write_jsonl
 from app.models import Standard
 
 API_URL = (

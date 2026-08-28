@@ -31,7 +31,7 @@ import json
 from typing import Any
 
 from app.config import get_settings
-from app.ingestion.normalize import load_jsonl, write_jsonl
+from ingestion.normalize import load_jsonl, write_jsonl
 from app.models import Standard
 
 # ---------------------------------------------------------------------------

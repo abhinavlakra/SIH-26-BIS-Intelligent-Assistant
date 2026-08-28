@@ -28,8 +28,8 @@ from collections import Counter
 
 from app.config import get_settings
 from app.models import Standard
-from app.rag import vectorstore
-from app.rag.embeddings import embed_query
+from rag import vectorstore
+from rag.embeddings import embed_query
 
 # Below this similarity nothing in the catalogue is genuinely related to the
 # query. Answering anyway is how RAG systems end up hallucinating.

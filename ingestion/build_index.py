@@ -8,9 +8,9 @@ Usage:
 import argparse
 
 from app.config import get_settings
-from app.ingestion.normalize import load_jsonl
-from app.rag import vectorstore
-from app.rag.embeddings import embed_texts
+from ingestion.normalize import load_jsonl
+from rag import vectorstore
+from rag.embeddings import embed_texts
 
 BATCH_SIZE = 64
 

@@ -38,7 +38,7 @@ from typing import Any
 import httpx
 
 from app.config import get_settings
-from app.ingestion.collector import HEADERS, REQUEST_DELAY_SECONDS
+from ingestion.collector import HEADERS, REQUEST_DELAY_SECONDS
 
 BASE = "https://standardsadmin.bis.gov.in/proposal-service/"
 BUCKETS_URL = BASE + "getSectorsWithSubSectorsAndCounts"
