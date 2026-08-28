@@ -5,11 +5,11 @@ import time
 from fastapi import APIRouter, File, HTTPException, UploadFile
 
 from app.models import RecommendRequest, RecommendResponse, SpecAnalyzeRequest, SpecAnalyzeResponse
-from app.rag import vectorstore
-from app.services import analytics
-from app.services import pdfdoc
-from app.services import recommend as recommend_service
-from app.services import spec as spec_service
+from rag import vectorstore
+from services import analytics
+from services import pdfdoc
+from services import recommend as recommend_service
+from services import spec as spec_service
 
 router = APIRouter(tags=["recommend"])
 

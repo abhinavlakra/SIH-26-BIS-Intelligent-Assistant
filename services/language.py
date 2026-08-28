@@ -33,7 +33,7 @@ fully local) and re-run `python -m app.ingestion.calibrate`.
 
 import re
 
-from app.rag.llm import LLMUnavailable, get_provider
+from rag.llm import LLMUnavailable, get_provider
 
 SUPPORTED = {"en": "English", "hi": "Hindi"}
 

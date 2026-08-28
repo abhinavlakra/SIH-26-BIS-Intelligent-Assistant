@@ -5,9 +5,9 @@ from fastapi import APIRouter, Query
 from app import bis_reference as bis
 from app.config import get_settings
 from app.models import AnalyticsResponse, HealthResponse, StatsResponse
-from app.rag import vectorstore
-from app.rag.llm import get_provider
-from app.services import analytics
+from rag import vectorstore
+from rag.llm import get_provider
+from services import analytics
 
 router = APIRouter(tags=["meta"])
 

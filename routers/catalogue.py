@@ -16,7 +16,7 @@ from app.models import (
     ServiceAnswer,
     StandardDetail,
 )
-from app.services import catalogue, certification, knowledge
+from services import catalogue, certification, knowledge
 
 router = APIRouter(tags=["catalogue"])
 
