@@ -6,8 +6,10 @@ venv/
 *.egg-info/
 .pytest_cache/
 
-# Secrets
+# Secrets (root .env has API keys — keep it ignored)
 .env
+# But frontend/.env is safe to commit (only VITE_API_BASE, no secrets)
+!frontend/.env
 
 # Generated artefacts (rebuild with: python -m app.ingestion.build_index)
 data/chroma/

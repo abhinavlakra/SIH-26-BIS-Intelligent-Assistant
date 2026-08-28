@@ -1,0 +1,55 @@
+# render.yaml — Render Blueprint for ManakMitra
+# https://docs.render.com/blueprint-spec
+#
+# This file lets Render auto-detect your service configuration.
+# After connecting your GitHub repo, Render reads this and sets up the service.
+
+services:
+  - type: web
+    name: manak-mitra
+    runtime: python
+    plan: free  # change to "starter" or "standard" for production
+
+    # Build: install deps, build frontend, rebuild the vector index
+    buildCommand: "chmod +x build.sh && ./build.sh"
+
+    # Start: single process serves the API + the built frontend bundle
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+
+    envVars:
+      # Python & Node versions
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: NODE_VERSION
+        value: "20"
+
+      # --- LLM (optional — app works in extractive mode without these) ---
+      - key: LLM_PROVIDER
+        value: "anthropic"
+      # Set these on the dashboard (Settings > Environment) with your actual keys:
+      - key: ANTHROPIC_API_KEY
+        sync: false  # set manually on dashboard
+      - key: ANTHROPIC_AUTH_TOKEN
+        sync: false
+      - key: ANTHROPIC_BASE_URL
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: "claude-opus-4-8"
+      - key: LLM_MAX_TOKENS
+        value: "2048"
+      - key: LLM_TIMEOUT_SECONDS
+        value: "60"
+      - key: LLM_MAX_RETRIES
+        value: "0"
+      - key: LLM_CIRCUIT_COOLDOWN_SECONDS
+        value: "60"
+
+      # --- Embeddings (local, free) ---
+      - key: EMBEDDING_MODEL
+        value: "sentence-transformers/all-MiniLM-L6-v2"
+
+      # --- Retrieval ---
+      - key: DEFAULT_TOP_K
+        value: "5"
+      - key: DEFAULT_TOP_N
+        value: "5"
