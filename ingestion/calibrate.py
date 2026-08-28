@@ -11,7 +11,7 @@ gap has shifted. Do not carry the constants over blindly.
     python -m app.ingestion.calibrate
 """
 
-from app.rag.retriever import RECOMMEND_FLOOR, RELEVANCE_FLOOR, search
+from rag.retriever import RECOMMEND_FLOOR, RELEVANCE_FLOOR, search
 
 # Questions a user would genuinely ask of this catalogue.
 RELEVANT_QUERIES = [
