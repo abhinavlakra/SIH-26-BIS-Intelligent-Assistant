@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 
 from routers import catalogue, chat, health, recommend
 
-FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+FRONTEND_DIST = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 
 app = FastAPI(
     title="ManakMitra — BIS Standards Assistant",
