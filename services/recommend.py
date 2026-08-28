@@ -16,9 +16,9 @@ import json
 import re
 
 from app.models import Recommendation, RecommendResponse, Standard
-from app.rag.llm import LLMUnavailable, get_provider
-from app.rag.retriever import RECOMMEND_FLOOR, expand_related, search
-from app.services import language
+from rag.llm import LLMUnavailable, get_provider
+from rag.retriever import RECOMMEND_FLOOR, expand_related, search
+from services import language
 
 SYSTEM_PROMPT = """You map products and procurement specifications to the \
 Indian Standards (IS) that apply to them.

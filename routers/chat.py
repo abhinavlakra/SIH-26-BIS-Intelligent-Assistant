@@ -5,8 +5,8 @@ import time
 from fastapi import APIRouter, HTTPException
 
 from app.models import ChatRequest, ChatResponse
-from app.rag import vectorstore
-from app.services import analytics, chat
+from rag import vectorstore
+from services import analytics, chat
 
 router = APIRouter(tags=["chat"])
 

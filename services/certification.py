@@ -12,7 +12,7 @@ them, and a wrong number in front of a BIS jury is worse than no number.
 
 from app import bis_reference as bis
 from app.models import CertificationResponse
-from app.rag import vectorstore
+from rag import vectorstore
 
 # When a standard carries no explicit scheme, fall back on what the department
 # usually implies. Electronics and IT goods run through CRS; most physical

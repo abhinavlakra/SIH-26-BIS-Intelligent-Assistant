@@ -20,8 +20,8 @@ from app.models import (
     StandardDetail,
     StandardSummary,
 )
-from app.rag import vectorstore
-from app.rag.vectorstore import _normalise_ref
+from rag import vectorstore
+from rag.vectorstore import _normalise_ref
 
 
 def _summary(standard) -> StandardSummary:

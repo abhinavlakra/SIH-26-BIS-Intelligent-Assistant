@@ -16,7 +16,7 @@ import re
 
 from app import bis_services
 from app.models import ServiceAnswer
-from app.rag.embeddings import embed_query, embed_texts
+from rag.embeddings import embed_query, embed_texts
 
 # Questions whose *intent* is a BIS service, whatever product noun they carry.
 #

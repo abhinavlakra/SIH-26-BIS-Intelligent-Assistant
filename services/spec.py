@@ -29,11 +29,11 @@ from app.models import (
     SpecSource,
     Standard,
 )
-from app.services import pdfdoc
-from app.rag import vectorstore
-from app.rag.llm import get_provider
-from app.rag.retriever import RECOMMEND_FLOOR, search
-from app.rag.vectorstore import _normalise_ref
+from services import pdfdoc
+from rag import vectorstore
+from rag.llm import get_provider
+from rag.retriever import RECOMMEND_FLOOR, search
+from rag.vectorstore import _normalise_ref
 
 # Matches the ways a tender writes a standard reference:
 #   IS 456, IS 456:2000, IS 1893 (Part 1) : 2016, IS/ISO 9001:2015

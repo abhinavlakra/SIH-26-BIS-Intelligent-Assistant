@@ -7,9 +7,9 @@ through an API outage.
 """
 
 from app.models import Citation, ChatResponse, Standard
-from app.rag.llm import LLMUnavailable, get_provider
-from app.rag.retriever import format_context, search
-from app.services import knowledge, language
+from rag.llm import LLMUnavailable, get_provider
+from rag.retriever import format_context, search
+from services import knowledge, language
 
 SERVICES_SYSTEM_PROMPT = """You are ManakMitra, an assistant for the Bureau of \
 Indian Standards (BIS). You are answering a question about BIS *services* — \
